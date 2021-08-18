@@ -268,19 +268,42 @@ body, html {
 }
 */
 
-/*********player scorecard**********/
+/*********players scorecard**********/
 
-/*.players-scorecard{
-    width: 100%;
-    position: fixed;
-    bottom: 50px;
-}*/
-
-table{
-    border-spacing: 0;
+.players-scorecard{
+    box-sizing: border-box;
 }
 
+
+
+tbody{
+    /*overflow: hidden;*/
+        overflow-y: auto;
+        height: 160px;
+        display: block;
+}
+
+table tr{
+    display: block;
+}
+
+table tr td{
+    /*float: left;*/
+    width: 150px;
+}
+
+table th{
+    /*float: left;*/
+    width: 110px;
+}
+
+td{
+    padding: 5px;
+}
+
+
 .score-table{
+    border-spacing: 0;
     padding-top: 10px;
     font-size: 14px;
     color: white;
@@ -300,6 +323,7 @@ table{
 
 .table-header th{
     border-bottom:1px solid white;
+    position: sticky;
 }
 
 
@@ -311,8 +335,8 @@ tr{
 td img{
     position: absolute;
     width: 20px;
-    left: 40px;
-    bottom: 4px;
+    left: 63px;
+    bottom: 5px;
 }
 
 .your-ranking{
@@ -343,6 +367,16 @@ td img{
     align-items: center;
 
 }
+
+.page-toggler button{
+    background-color: #333655;
+    border: none;
+}
+
+.page-toggler button:hover img{
+    filter: invert(50%);
+}
+
 
 .page-toggler img{
     width: 30px;
